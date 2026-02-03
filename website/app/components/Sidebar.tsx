@@ -50,14 +50,14 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="hidden md:flex fixed left-4 top-1/2 -translate-y-1/2 w-16 flex-col items-center py-6 transition-all z-50 rounded-2xl bg-slate-900/60 backdrop-blur-xl border border-emerald-500/20 shadow-[0_0_20px_rgba(16,185,129,0.15)]">
+    <aside className="hidden md:flex fixed left-4 top-1/2 -translate-y-1/2 w-16 flex-col items-center py-6 transition-all z-50 rounded-2xl bg-slate-900/60 backdrop-blur-xl border border-red-500/20 shadow-[0_0_20px_rgba(239,68,68,0.15)]">
       
       {/* Logo */}
       <div className="mb-10 shrink-0">
         <div className="block relative w-6 h-6 opacity-100 transition-opacity cursor-default">
           <Image
             src="/icon-small.svg"
-            alt="LogLife"
+            alt="AutoClaw"
             fill
             className="object-contain"
           />
@@ -70,7 +70,7 @@ export default function Sidebar() {
           <Link
             key={index}
             href={item.href}
-            className="w-8 h-8 flex items-center justify-center transition-colors text-slate-400 hover:text-emerald-400"
+            className="w-8 h-8 flex items-center justify-center transition-colors text-slate-400 hover:text-red-400"
             title={item.label}
           >
             {item.icon}
@@ -82,7 +82,7 @@ export default function Sidebar() {
       <div className="mt-10 shrink-0">
         <Link 
           href="/login" 
-          className="w-8 h-8 flex items-center justify-center transition-colors text-slate-400 hover:text-emerald-400"
+          className="w-8 h-8 flex items-center justify-center transition-colors text-slate-400 hover:text-red-400"
           title="Sign In"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
