@@ -1,0 +1,2 @@
+# autoclaw
+OpenClaw, but automated.
