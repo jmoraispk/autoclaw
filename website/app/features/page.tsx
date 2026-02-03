@@ -163,8 +163,16 @@ export default function FeaturesPage() {
         {/* Skills Section */}
         <section className="mb-24 animate-slide-up" style={{ animationDelay: "0.2s" }}>
           <div className="mb-8">
-            <h2 className="text-3xl font-bold text-white mb-2">Skills</h2>
-            <p className="text-slate-400">Extend your agent with powerful integrations</p>
+            <div className="flex items-center gap-3 mb-2">
+              <h2 className="text-3xl font-bold text-white">Skills</h2>
+              <span className="px-2.5 py-1 text-xs font-medium bg-teal-500/10 text-teal-400 border border-teal-500/20 rounded-full flex items-center gap-1">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                All vetted for security
+              </span>
+            </div>
+            <p className="text-slate-400">Curated integrations reviewed by our team—no unverified community code</p>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -216,17 +224,18 @@ export default function FeaturesPage() {
               <p className="text-slate-400">On top of OpenClaw's features</p>
             </div>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {[
-                { title: "One-Click Deploy", description: "No SSH, no server setup. We handle everything." },
-                { title: "Cost Dashboard", description: "Track API usage across all providers in one place." },
-                { title: "Managed Updates", description: "We keep your OpenClaw instance up to date." },
-                { title: "Support", description: "Direct access to our team when you need help." },
+                { title: "One-Click Deploy", description: "No SSH, no server setup. We handle everything.", icon: "M5 13l4 4L19 7" },
+                { title: "Vetted Skills", description: "Every skill reviewed for security. No unverified code.", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" },
+                { title: "Cost Dashboard", description: "Track API usage across all providers in one place.", icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" },
+                { title: "Managed Updates", description: "We keep your OpenClaw instance up to date.", icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" },
+                { title: "Support", description: "Direct access to our team when you need help.", icon: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" },
               ].map((item, index) => (
                 <div key={index} className="text-center">
                   <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-red-500/20 border border-red-500/30 flex items-center justify-center">
                     <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
                     </svg>
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
