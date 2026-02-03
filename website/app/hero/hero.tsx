@@ -305,7 +305,10 @@ function BeforeAfter() {
                 "Click 'Deploy Now'",
                 "Connect your AI provider (Anthropic/OpenAI)",
                 "Pick your skills",
-                "Start chatting"
+                "Start chatting",
+                "Unified cost dashboard",
+                "Managed updates",
+                "Support included"
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-white">
                   <svg className="w-5 h-5 text-teal-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -315,9 +318,6 @@ function BeforeAfter() {
                 </li>
               ))}
             </ul>
-            <div className="mt-8 pt-6 border-t border-slate-700/50">
-              <p className="text-sm text-slate-400">Plus: unified cost dashboard, managed updates, and support.</p>
-            </div>
           </div>
         </div>
       </div>
