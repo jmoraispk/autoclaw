@@ -39,6 +39,33 @@ const BLOG_POSTS = [
     readTime: "8 min read",
     category: "Engineering",
     image: "/blog/tailscale.jpg"
+  },
+  {
+    slug: "mcp-servers-guide",
+    title: "Getting Started with MCP Servers",
+    excerpt: "Learn how to configure and use Model Context Protocol servers to extend your AI agent's capabilities with external tools and integrations.",
+    date: "Dec 12, 2025",
+    readTime: "6 min read",
+    category: "Tutorial",
+    image: "/blog/mcp.jpg"
+  },
+  {
+    slug: "self-hosted-vs-cloud",
+    title: "Self-Hosted AI: Why It Matters",
+    excerpt: "Privacy, control, and cost savings—exploring the benefits of running your own AI infrastructure instead of relying on cloud services.",
+    date: "Dec 5, 2025",
+    readTime: "5 min read",
+    category: "Philosophy",
+    image: "/blog/selfhosted.jpg"
+  },
+  {
+    slug: "docker-compose-best-practices",
+    title: "Docker Compose Patterns for AI Workloads",
+    excerpt: "Best practices for containerizing AI agents, managing GPU resources, and orchestrating multi-service deployments with Docker Compose.",
+    date: "Nov 28, 2025",
+    readTime: "10 min read",
+    category: "Engineering",
+    image: "/blog/docker.jpg"
   }
 ];
 

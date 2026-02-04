@@ -1,0 +1,65 @@
+{
+  "why-openclaw-deployment-hard": {
+    "slug": "why-openclaw-deployment-hard",
+    "title": "Why Deploying OpenClaw Is Harder Than It Should Be",
+    "excerpt": "Exploring the challenges of setting up personal AI assistants: VPS rental, SSH configuration, networking, and why we built AutoClaw.",
+    "date": "Jan 28, 2026",
+    "readTime": "5 min read",
+    "category": "Product",
+    "content": "## The Problem with Self-Hosting AI Agents\n\nSetting up your own AI agent shouldn't require a DevOps degree. Yet, for most users trying to deploy OpenClaw or similar tools, the journey looks something like this:\n\n1. Rent a VPS - Navigate confusing pricing tiers, choose between providers, figure out what specs you actually need\n2. SSH Configuration - Generate keys, manage permissions, deal with firewall rules\n3. Networking - Port forwarding, reverse proxies, SSL certificates\n4. Docker Setup - Install Docker, configure compose files, manage volumes\n5. Maintenance - Updates, backups, monitoring\n\n## Why We Built AutoClaw\n\nAutoClaw eliminates all of this complexity. With a single click, you get:\n\n- Pre-configured VPS with optimal specs for AI workloads\n- Secure networking via Tailscale (no port forwarding needed)\n- Automatic Docker deployment with sensible defaults\n- Built-in monitoring and easy updates\n\n## The Technical Reality\n\nMost users just want their AI agent to work. They don't want to spend hours debugging nginx configurations or figuring out why their WebSocket connections keep dropping.\n\nWe've handled the infrastructure so you can focus on what matters: using your AI agent to get things done.\n\n## What's Next\n\nIn upcoming posts, we'll dive deeper into specific technical challenges and how AutoClaw solves them. Stay tuned!"
+  },
+  "understanding-api-costs": {
+    "slug": "understanding-api-costs",
+    "title": "Understanding Your AI Agent's API Costs",
+    "excerpt": "A breakdown of how API costs accumulate across Anthropic, OpenAI, and other providers—and how to track them effectively.",
+    "date": "Jan 15, 2026",
+    "readTime": "7 min read",
+    "category": "Tutorial",
+    "content": "## The Hidden Cost of AI Agents\n\nWhen you run an AI agent, every interaction costs money. Understanding these costs is crucial for budgeting and optimization.\n\n## How Pricing Works\n\n### Anthropic (Claude)\n- Input tokens: $3 per million tokens (Claude 3 Sonnet)\n- Output tokens: $15 per million tokens\n- Context window: 200K tokens\n\n### OpenAI (GPT-4)\n- Input tokens: $10 per million tokens (GPT-4 Turbo)\n- Output tokens: $30 per million tokens\n- Context window: 128K tokens\n\n## Real-World Cost Examples\n\nA typical coding session with an AI agent might involve:\n- 50 back-and-forth messages\n- Average 2,000 input tokens per message\n- Average 1,500 output tokens per response\n\nTotal cost: Roughly $2-5 per session depending on the model.\n\n## Tips for Cost Optimization\n\n1. Choose the right model - Use smaller models for simple tasks\n2. Be concise - Shorter prompts = lower costs\n3. Cache when possible - Avoid redundant API calls\n4. Set budgets - Use provider dashboards to set spending limits\n\n## AutoClaw's Cost Tracking\n\nAutoClaw includes built-in cost tracking so you always know exactly what you're spending. No surprises at the end of the month."
+  },
+  "curated-skills-philosophy": {
+    "slug": "curated-skills-philosophy",
+    "title": "The Case for Curated Skills: Less Is More",
+    "excerpt": "OpenClaw has 50+ skills. Most users need 5-10. Here's how we think about skill curation for new users.",
+    "date": "Jan 8, 2026",
+    "readTime": "4 min read",
+    "category": "Philosophy",
+    "content": "## The Paradox of Choice\n\nOpenClaw ships with over 50 skills. File management, web browsing, code execution, API integrations, database queries, and much more.\n\nBut here's the thing: most users only need 5-10 skills.\n\n## Why More Isn't Better\n\n1. Cognitive overhead - More options means more confusion\n2. Security surface - Each skill is a potential vulnerability\n3. Performance - Unused skills still consume resources\n4. Maintenance - More skills = more things that can break\n\n## Our Curation Philosophy\n\nAt AutoClaw, we believe in opinionated defaults:\n\n- Start with essential skills enabled\n- Make it easy to add more when needed\n- Provide clear documentation for each skill\n- Remove skills that cause more problems than they solve\n\n## The Essential Skill Set\n\nFor most users, we recommend starting with:\n\n1. File System - Read, write, navigate files\n2. Shell - Execute commands\n3. Web Browser - Research and automation\n4. Code Editor - Write and modify code\n5. Git - Version control\n\n## Conclusion\n\nDon't enable skills \"just in case.\" Start minimal, add as needed. Your AI agent will be faster, safer, and easier to understand."
+  },
+  "tailscale-networking-explained": {
+    "slug": "tailscale-networking-explained",
+    "title": "How AutoClaw Uses Tailscale for Secure Networking",
+    "excerpt": "A technical deep dive into how we leverage Tailscale to provide secure, zero-config networking for your AI agent.",
+    "date": "Dec 20, 2025",
+    "readTime": "8 min read",
+    "category": "Engineering",
+    "content": "## The Networking Problem\n\nTraditional VPS setups require:\n- Opening ports in firewalls\n- Configuring reverse proxies\n- Managing SSL certificates\n- Dealing with dynamic IPs\n\nThis is complex, error-prone, and creates security risks.\n\n## Enter Tailscale\n\nTailscale creates a secure mesh network using WireGuard. Every device gets a stable IP address, and all traffic is end-to-end encrypted.\n\n## How AutoClaw Uses It\n\n### Zero Configuration\nWhen you deploy with AutoClaw, Tailscale is automatically configured. No ports to open, no certificates to manage.\n\n### Secure by Default\n- All traffic encrypted with WireGuard\n- No exposed ports on the public internet\n- Access controlled via Tailscale ACLs\n\n### Easy Access\nConnect to your AI agent from anywhere:\n- Your laptop at home\n- Your phone on the go\n- Your work computer\n\nAll through the same secure tunnel.\n\n## Technical Details\n\n```\nYour Device <--WireGuard--> Tailscale Network <--WireGuard--> AutoClaw VPS\n```\n\nThe connection is:\n- Peer-to-peer when possible (fastest)\n- Relayed through Tailscale DERP servers when needed\n- Always encrypted, always authenticated\n\n## Why Not Just Use a VPN?\n\nTraditional VPNs:\n- Require manual setup\n- Often slow down your connection\n- Single point of failure\n\nTailscale:\n- Zero-config mesh network\n- Direct peer connections\n- Highly resilient\n\n## Conclusion\n\nTailscale lets us provide enterprise-grade networking security without the enterprise-grade complexity. It's one of the key technologies that makes AutoClaw possible."
+  },
+  "mcp-servers-guide": {
+    "slug": "mcp-servers-guide",
+    "title": "Getting Started with MCP Servers",
+    "excerpt": "Learn how to configure and use Model Context Protocol servers to extend your AI agent's capabilities with external tools and integrations.",
+    "date": "Dec 12, 2025",
+    "readTime": "6 min read",
+    "category": "Tutorial",
+    "content": "## What is MCP?\n\nThe Model Context Protocol (MCP) is a standard for connecting AI models to external tools and data sources. Think of it as a universal adapter for AI capabilities.\n\n## Why MCP Matters\n\nBefore MCP, every AI tool had its own integration format. MCP provides:\n\n- Standardization - One protocol, many tools\n- Security - Controlled access to capabilities\n- Flexibility - Easy to add and remove integrations\n\n## Setting Up Your First MCP Server\n\n### 1. Choose a Server\n\nPopular MCP servers include:\n- Filesystem - File operations\n- GitHub - Repository management\n- Postgres - Database queries\n- Brave Search - Web search\n\n### 2. Configure in AutoClaw\n\nAdd to your configuration:\n\n```json\n{\n  \"mcpServers\": {\n    \"filesystem\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-filesystem\", \"/path/to/allow\"]\n    }\n  }\n}\n```\n\n### 3. Use in Your Agent\n\nOnce configured, your AI agent can automatically use the MCP server's capabilities.\n\n## Best Practices\n\n1. Principle of least privilege - Only enable what you need\n2. Audit regularly - Review what servers are active\n3. Keep updated - MCP servers get security patches\n\n## Conclusion\n\nMCP servers are the building blocks of a powerful AI agent. Start with the basics and expand as your needs grow."
+  },
+  "self-hosted-vs-cloud": {
+    "slug": "self-hosted-vs-cloud",
+    "title": "Self-Hosted AI: Why It Matters",
+    "excerpt": "Privacy, control, and cost savings—exploring the benefits of running your own AI infrastructure instead of relying on cloud services.",
+    "date": "Dec 5, 2025",
+    "readTime": "5 min read",
+    "category": "Philosophy",
+    "content": "## The Case for Self-Hosting\n\nCloud AI services are convenient, but they come with trade-offs that many users don't consider until it's too late.\n\n## Privacy Concerns\n\n### What Cloud Providers See\n- Every prompt you send\n- Every file you share\n- Your usage patterns\n- Your business logic\n\n### With Self-Hosting\n- Data stays on your infrastructure\n- No third-party logging\n- Full control over retention\n\n## Cost Analysis\n\n### Cloud Services\n- Pay per API call\n- Costs scale unpredictably\n- Premium for advanced features\n\n### Self-Hosted\n- Fixed infrastructure cost\n- Predictable monthly bills\n- All features included\n\n## Control and Customization\n\nSelf-hosting lets you:\n- Choose your models\n- Customize behavior\n- Integrate with internal systems\n- Set your own security policies\n\n## The AutoClaw Approach\n\nWe believe in easy self-hosting:\n- One-click deployment\n- Your infrastructure, your rules\n- We handle the complexity\n\n## When Cloud Makes Sense\n\nSelf-hosting isn't for everyone. Cloud is better when:\n- You're just experimenting\n- Scale varies dramatically\n- You lack technical resources\n\n## Conclusion\n\nFor serious AI usage, self-hosting provides privacy, control, and often better economics. AutoClaw makes it accessible to everyone."
+  },
+  "docker-compose-best-practices": {
+    "slug": "docker-compose-best-practices",
+    "title": "Docker Compose Patterns for AI Workloads",
+    "excerpt": "Best practices for containerizing AI agents, managing GPU resources, and orchestrating multi-service deployments with Docker Compose.",
+    "date": "Nov 28, 2025",
+    "readTime": "10 min read",
+    "category": "Engineering",
+    "content": "## Why Docker Compose for AI?\n\nAI workloads often involve multiple services:\n- The AI agent itself\n- Vector databases\n- API gateways\n- Monitoring tools\n\nDocker Compose orchestrates all of these elegantly.\n\n## Basic Structure\n\n```yaml\nversion: '3.8'\nservices:\n  agent:\n    image: openclaw/agent:latest\n    volumes:\n      - ./config:/app/config\n    environment:\n      - API_KEY=${API_KEY}\n    \n  vectordb:\n    image: qdrant/qdrant:latest\n    volumes:\n      - qdrant_data:/qdrant/storage\n\nvolumes:\n  qdrant_data:\n```\n\n## GPU Configuration\n\nFor GPU-accelerated workloads:\n\n```yaml\nservices:\n  agent:\n    deploy:\n      resources:\n        reservations:\n          devices:\n            - driver: nvidia\n              count: 1\n              capabilities: [gpu]\n```\n\n## Networking Best Practices\n\n1. Use internal networks - Services don't need public exposure\n2. Define dependencies - Use `depends_on` with health checks\n3. Limit ports - Only expose what's necessary\n\n## Resource Management\n\n```yaml\nservices:\n  agent:\n    deploy:\n      resources:\n        limits:\n          cpus: '4'\n          memory: 8G\n        reservations:\n          cpus: '2'\n          memory: 4G\n```\n\n## Health Checks\n\n```yaml\nservices:\n  agent:\n    healthcheck:\n      test: [\"CMD\", \"curl\", \"-f\", \"http://localhost:8080/health\"]\n      interval: 30s\n      timeout: 10s\n      retries: 3\n```\n\n## AutoClaw's Docker Setup\n\nAutoClaw uses these patterns internally:\n- Isolated networks for security\n- Automatic health monitoring\n- Optimized resource allocation\n- Easy scaling when needed\n\n## Conclusion\n\nDocker Compose is perfect for AI workloads. These patterns will help you build robust, maintainable deployments."
+  }
+}
