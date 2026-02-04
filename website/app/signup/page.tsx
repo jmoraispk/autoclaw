@@ -116,15 +116,10 @@ export default function SignupPage() {
           </form>
 
           <div className="mt-6">
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-slate-700"></div>
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-slate-900/40 text-slate-500 bg-opacity-0 backdrop-blur-xl bg-clip-text">
-                  Or sign up with
-                </span>
-              </div>
+            <div className="flex items-center gap-4">
+              <div className="flex-1 border-t border-slate-700"></div>
+              <span className="text-sm text-slate-500">Or sign up with</span>
+              <div className="flex-1 border-t border-slate-700"></div>
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-3">
