@@ -7,7 +7,7 @@ config({ path: resolve(__dirname, "../.env") });
 
 const nextConfig: NextConfig = {
   turbopack: {
-    root: "..",
+    root: resolve(__dirname, ".."),
   },
   images: {
     remotePatterns: [
